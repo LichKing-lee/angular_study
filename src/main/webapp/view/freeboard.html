@@ -1,0 +1,31 @@
+<html>
+<body>
+    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+        <table>
+            <thead>
+                <tr>
+                    <th>번호</th>
+                    <th>제목</th>
+                    <th>날짜</th>
+                    <th>작성자</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-show="boardList.length == 0">
+                    <td colspan="4">게시물이 없습니다.</td>
+                </tr>
+
+                <tr ng-repeat="board in boardList">
+                    <td>{{$index + 1}}</td>
+                    <td>{{board.title}}</td>
+                    <td>{{board.writeDate}}</td>
+                    <td>{{board.writeName}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <input type="button" value="write" ng-click=""/>
+    </div>
+</body>
+</html>
