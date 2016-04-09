@@ -2,7 +2,8 @@ angular.module("YongApp", ["ngRoute"])
     .config(["$routeProvider", function($routeProvider){
         $routeProvider
             .when("/free-board", {templateUrl : "freeboard.html", controller : "freeCtrl"})
-            .when("/write-board", {templateUrl : "writeboard.html", controller : "writeCtrl"});
+            .when("/write-board", {templateUrl : "writeboard.html", controller : "writeCtrl"})
+            .when("/detail-board/:boardIdx", {templateUrl : "detailboard.html", controller : "detailCtrl"});
     }])
     .controller("homeCtrl", ["$scope", "$route", function($scope, $route){
 
@@ -28,7 +29,7 @@ angular.module("YongApp", ["ngRoute"])
                 method : "post",
                 params : {
                     title : $scope.title,
-                    contents : $scope.contens,
+                    contents : $scope.contents,
                     writeName : $scope.writeName
                 }
             }).then(function success(){
@@ -37,11 +38,39 @@ angular.module("YongApp", ["ngRoute"])
 
             });
         }
-    }]);
+    }])
+    .controller("detailCtrl", ["$scope", "$http", "$routeParams", function($scope, $http, $routeParams){
+        $http({
+            url : "/detailBoard.json",
+            method : "get",
+            params : {
+                boardIdx : $routeParams.boardIdx
+            }
+        }).then(function success(result){
+            $scope.title = result.data.title;
+            $scope.contents = result.data.contents;
+            $scope.writeName = result.data.writeName;
+        }, function error(){
 
-function Board(title, contents, date, name){
-    this.title = title;
-    this.contents = contents;
-    this.writeDate = date;
-    this.writeName = name;
-}
+        });
+        
+        $scope.delete = function(){
+            if(!confirm("삭제하시겠습니까?")){ return; }
+
+            $http({
+                url : "/deleteBoard.json",
+                method : "get",
+                params : {
+                    boardIdx : $routeParams.boardIdx
+                }
+            }).then(function success(){
+                location.href = "#free-board";
+            }, function error(){
+
+            });
+        };
+        
+        $scope.list = function(){
+            location.href = "#free-board";
+        };
+    }]);

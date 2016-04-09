@@ -17,7 +17,7 @@
 
                 <tr ng-repeat="board in boardList">
                     <td>{{$index + 1}}</td>
-                    <td>{{board.title}}</td>
+                    <td><a href="#detail-board/{{$index}}">{{board.title}}</a></td>
                     <td>{{board.writeDate}}</td>
                     <td>{{board.writeName}}</td>
                 </tr>
