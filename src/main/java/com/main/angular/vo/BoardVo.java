@@ -1,6 +1,9 @@
-package com.main.angular.controller;
+package com.main.angular.vo;
 
 import lombok.Data;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /**
  * Created by ChangYong on 2016. 4. 7..
@@ -12,10 +15,14 @@ public class BoardVo {
     private String writeDate;
     private String writeName;
 
-    public BoardVo(String title, String contents, String writeDate, String writeName){
+    public BoardVo(String title, String contents, String writeName){
         this.title = title;
         this.contents = contents;
-        this.writeDate = writeDate;
+
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+        String date = format.format(new Date());
+
+        this.writeDate = date;
         this.writeName = writeName;
     }
 }
