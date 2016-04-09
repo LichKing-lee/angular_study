@@ -2,7 +2,7 @@ angular.module("YongApp", ["ngRoute"])
     .config(["$routeProvider", function($routeProvider){
         $routeProvider
             .when("/free-board", {templateUrl : "freeboard.html", controller : "freeCtrl"})
-            .when("/QA-board", {templateUrl : "qaboard.html", controller : "qaCtrl"});
+            .when("/write-board", {templateUrl : "writeboard.html", controller : "writeCtrl"});
     }])
     .controller("homeCtrl", ["$scope", "$route", function($scope, $route){
 
@@ -16,8 +16,12 @@ angular.module("YongApp", ["ngRoute"])
         }, function error(){
 
         });
+
+        $scope.goWrite = function(){
+            location.href = "#write-board";
+        }
     }])
-    .controller("qaCtrl", ["$scope", function($scope){
+    .controller("writeCtrl", ["$scope", function($scope){
         
     }]);
 

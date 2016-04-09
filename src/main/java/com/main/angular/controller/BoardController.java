@@ -18,8 +18,6 @@ public class BoardController {
     @RequestMapping("/getBoard")
     @ResponseBody
     public List<BoardVo> getBoard(){
-
-
         return boardService.getBoardList();
     }
 }

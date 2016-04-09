@@ -8,11 +8,13 @@ import lombok.Data;
 @Data
 public class BoardVo {
     private String title;
+    private String contents;
     private String writeDate;
     private String writeName;
 
-    public BoardVo(String title, String writeDate, String writeName){
+    public BoardVo(String title, String contents, String writeDate, String writeName){
         this.title = title;
+        this.contents = contents;
         this.writeDate = writeDate;
         this.writeName = writeName;
     }
