@@ -20,4 +20,12 @@ public class BoardService {
     public List<BoardVo> getBoardList(){
         return this.boardList;
     }
+
+    public BoardVo getBoard(int boardIdx) {
+        return boardList.get(boardIdx);
+    }
+
+    public void removeBoard(int boardIdx) {
+        boardList.remove(boardIdx);
+    }
 }
