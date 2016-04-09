@@ -1,5 +1,6 @@
-package com.main.angular.controller;
+package com.main.angular.service;
 
+import com.main.angular.vo.BoardVo;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;

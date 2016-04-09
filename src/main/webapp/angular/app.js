@@ -21,9 +21,21 @@ angular.module("YongApp", ["ngRoute"])
             location.href = "#write-board";
         }
     }])
-    .controller("writeCtrl", ["$scope", function($scope){
+    .controller("writeCtrl", ["$scope", "$http", function($scope, $http){
         $scope.save = function(){
+            $http({
+                url : "/insertBoard.json",
+                method : "post",
+                params : {
+                    title : $scope.title,
+                    contents : $scope.contents,
+                    writeName : $scope.writeName
+                }
+            }).then(function success(){
+                location.href = "#free-board";
+            }, function error(){
 
+            });
         }
     }]);
 
