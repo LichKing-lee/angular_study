@@ -29,8 +29,8 @@
       <file leaf-file-name="BoardController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/main/angular/controller/BoardController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="32" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
+            <state relative-caret-position="398">
+              <caret line="38" column="54" selection-start-line="38" selection-start-column="46" selection-end-line="38" selection-end-column="54" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -237,7 +237,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -432,6 +431,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="PackagesPane">
         <subPane />
@@ -971,11 +971,12 @@
       <workItem from="1460209493162" duration="283000" />
       <workItem from="1460211009156" duration="1962000" />
       <workItem from="1460262911618" duration="100000" />
+      <workItem from="1460263186358" duration="395000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33445000" />
+    <option name="totallyTimeSpent" value="33840000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="957" extended-state="6" />
@@ -1389,8 +1390,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/main/angular/controller/BoardController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="32" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
+        <state relative-caret-position="398">
+          <caret line="38" column="54" selection-start-line="38" selection-start-column="46" selection-end-line="38" selection-end-column="54" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
